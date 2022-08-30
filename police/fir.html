@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<title> Smart Policing system </title>
+<link rel="icon" href='/logo1.png' type="image/x-icon">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/police/pstyle.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body class="font-pop ">
+    <div class="sidebar close bg-blue-900">
+        <div class="logo-details">
+            <a href="/police/Dashboard.html">
+                <img src="/logo1.png" alt="Logo" class="w-14  my-6">
+            </a>
+            <span class="logo_name">Smart Policing</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="/police/vcomplaint.html">
+                    <i class='bx bx-comment-detail'></i>
+                    <span class="link_name">View Complaint</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="/police/vcomplaint.html">View complaint</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/police/fir.html">
+                    <i class='bx bx-detail'></i>
+                    <span class="link_name">FIR Report</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="/police/fir.html">FIR Report</a></li>
+                </ul>
+            </li>
+
+            <li>   
+                <a href="#">
+                    <i class='bx bx-book-add'></i>
+                    <span class="link_name">Case Documents</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Case Documents</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="profile-content">
+                    </div>
+
+                    <div class="profile_name ">Haider Ali</div>
+                    <a href="/police/login.html"> . <i class='bx bx-log-out'></i></a>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text">File FIR</span>
+        </div>
+    </section>
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e) => {
+                let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+                arrowParent.classList.toggle("showMenu");
+            });
+        }
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+       
+    </script>
+
+</body>
+
+</html>
